@@ -29,6 +29,7 @@ mongoose.connect(keys.mongodb.dbURL, function () {
 
 //set up routes
 app.use("/auth", authRoutes);
+// for profile
 app.use("/profile", profileRoutes);
 
 //create home route
