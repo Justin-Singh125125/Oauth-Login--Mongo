@@ -24,6 +24,7 @@ router.get("/google", passport.authenticate("google", {
 //the difference between the passport authentication is that here you have a code and you can exchange that code for profile info
 //passport will know automatically
 router.get("/google/redirect", passport.authenticate("google"), function (req, res) {
+    //since we are signed in, we redirect the user to the profile page
     res.redirect("/profile/");
 
 })
